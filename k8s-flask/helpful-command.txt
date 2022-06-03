@@ -1,0 +1,38 @@
+Overview of Kubernetes
+-----------------------
+Kubectl version
+Kubectl get nodes
+docker images
+
+Kubernetes Pods
+-----------------
+kubectl apply -f k8s-flask-pod.yaml
+kubectl get pods
+kubectl delete pod k8s-flask
+
+Kubernetes Service
+--------------------
+kubectl apply -f k8s-flask-pod-service.yaml
+kubectl get services
+kubectl delete pod k8s-flask-pod-service
+	
+
+Kubernetes Deployment
+-----------------------
+kubectl apply -f k8s-flask-deployment.yaml
+kubectl rollout status deployment k8s-flask-deployment
+
+
+Kubernetes Deployment Service
+-------------------------------
+kubectl apply -f k8s-flask-deployment-service.yaml
+kubectl get services
+kubectl delete pod k8s-flask-deployment-service
+
+
+
+Upgrade the Deployment
+----------------------------
+kubectl rollout status deployment k8s-flask-deployment
+kubectl set image deployment k8s-flask-deployment k8s-flask=k8s-flask:1.1
+kubectl rollout status deployment k8s-flask-deployment
