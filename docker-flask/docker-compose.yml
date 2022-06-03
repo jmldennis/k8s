@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  docker-flask:
+    build: ./
+    restart: on-failure
+    container_name: docker-flask
+    #image: docker-flask:1.0
+    ports:
+      - 5005:5005
+    networks:
+      - docker-net
+
+networks:
+  docker-net:
+    ipam:
+      config:
+        - subnet: "172.30.0.0/24"
