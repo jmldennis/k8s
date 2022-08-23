@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "jodennis/jenkins-docker"
+    registry = "jodennis/k8sflask"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }

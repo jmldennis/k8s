@@ -21,7 +21,7 @@ Kubernetes Deployment
 -----------------------
 kubectl apply -f k8sflaskdeployment.yaml
 kubectl rollout status deployment k8sflaskdeployment
-kubectl delete deployment k8sflaskpodservice
+kubectl delete deployment k8sflaskdeployment
 
 Kubernetes Deployment Service
 -------------------------------
