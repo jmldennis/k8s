@@ -27,7 +27,7 @@ pipeline {
       }
     }
 
-    /*stage('Upload Container to Registry') {
+    stage('Upload Container to Registry') {
       steps{
         script {
           docker.withRegistry('', registryCredential ) {
@@ -35,7 +35,7 @@ pipeline {
           }
         }
       }
-    }*/
+    }
 
     stage('Run image locally'){
       steps{
