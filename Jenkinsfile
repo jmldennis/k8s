@@ -9,19 +9,14 @@ pipeline {
     stage('Build') {
       steps {
         sh 'python3 -m venv venv && . venv/bin/activate && pip install -r requirements.txt'
-        sh 'python .k8s-flask/jenkinsFlask.py &'
+        sh 'python k8s-flask/jenkinsFlask.py &'
       }
     }
 
     stage('Test App') {
       steps {
-        sh 'python3 -m venv venv && . venv/bin/activate && pip install -r requirements.txt && python .k8s-flask/jenkinsUnittest.py'
+        sh 'python3 -m venv venv && . venv/bin/activate && pip install -r requirements.txt && python k8s-flask/jenkinsUnittest.py'
       }
-      post {
-        always {
-          junit 'test-reports/*.xml'
-        }
-      } 
     }
     
     stage('Build Docker Container') {
