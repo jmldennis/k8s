@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8sflaskdeployment
+  labels:
+    app: k8sflask
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: k8sflask
+  template:
+    metadata:
+      labels:
+        app: k8sflask
+    spec:
+      containers:
+      - name: k8sflask
+        image: k8sflask:1.0
+        imagePullPolicy: Never
+        ports: 
+        - containerPort: 5005

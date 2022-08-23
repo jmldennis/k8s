@@ -6,33 +6,33 @@ docker images
 
 Kubernetes Pods
 -----------------
-kubectl apply -f k8s-flask-pod.yaml
+kubectl apply -f k8sflaskpod.yaml
 kubectl get pods
-kubectl delete pod k8s-flask
+kubectl delete pod k8sflaskpod
 
 Kubernetes Service
 --------------------
-kubectl apply -f k8s-flask-pod-service.yaml
+kubectl apply -f k8sflaskpodservice.yaml
 kubectl get services
-kubectl delete pod k8s-flask-pod-service
+kubectl delete service k8sflaskpodservice
 	
 
 Kubernetes Deployment
 -----------------------
-kubectl apply -f k8s-flask-deployment.yaml
-kubectl rollout status deployment k8s-flask-deployment
-
+kubectl apply -f k8sflaskdeployment.yaml
+kubectl rollout status deployment k8sflaskdeployment
+kubectl delete deployment k8sflaskpodservice
 
 Kubernetes Deployment Service
 -------------------------------
-kubectl apply -f k8s-flask-deployment-service.yaml
+kubectl apply -f k8sflaskdeploymentservice.yaml
 kubectl get services
-kubectl delete pod k8s-flask-deployment-service
+kubectl delete service k8sflaskdeploymentservice
 
 
 
 Upgrade the Deployment
 ----------------------------
-kubectl rollout status deployment k8s-flask-deployment
-kubectl set image deployment k8s-flask-deployment k8s-flask=k8s-flask:1.1
-kubectl rollout status deployment k8s-flask-deployment
+kubectl rollout status deployment k8sflaskdeployment
+kubectl set image deployment k8sflaskdeployment k8sflask=k8sflask:1.1
+kubectl rollout status deployment k8sflaskdeployment

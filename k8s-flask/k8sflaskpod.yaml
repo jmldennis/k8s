@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k8sflaskpod
+  labels:
+    app: k8sflask
+spec:
+  containers:
+  - name: k8sflask
+    image: k8sflask:1.0
+    imagePullPolicy: Never
