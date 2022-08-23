@@ -1,11 +1,11 @@
 import unittest
-import k8sFlask
+import k8sflask
 
 class TestFlask(unittest.TestCase):
 
     def setUp(self):
-        k8sFlask.app.testing = True
-        self.app = k8sFlask.app.test_client()
+        k8sflask.app.testing = True
+        self.app = k8sflask.app.test_client()
 
     def test_index(self):
         rv = self.app.get('/')
