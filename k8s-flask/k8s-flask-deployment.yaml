@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: k8s-flask-deployment
   labels:
-    app: k8s-flask
+    app: k8sFlask
 spec:
-  replicas: 3
+  replicas: 10
   selector:
     matchLabels:
-      app: k8s-flask
+      app: k8sFlask
   template:
     metadata:
       labels:
-        app: k8s-flask
+        app: k8sFlask
     spec:
       containers:
-      - name: k8s-flask
-        image: k8s-flask:1.0
+      - name: k8sFlask
+        image: k8sFlask:1.0
         imagePullPolicy: Never
         ports: 
         - containerPort: 5005

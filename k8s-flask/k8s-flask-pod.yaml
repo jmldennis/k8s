@@ -3,9 +3,9 @@ kind: Pod
 metadata:
   name: k8s-flask-pod
   labels:
-    app: k8s-flask
+    app: k8sFlask
 spec:
   containers:
-  - name: k8s-flask
-    image: k8s-flask:1.0
+  - name: k8sFlask
+    image: k8sFlask:1.0
     imagePullPolicy: Never
