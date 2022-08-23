@@ -37,6 +37,11 @@ pipeline {
       }
     }
 
+    stage('Echo Command'){
+      steps{
+        sh "echo kubectl set image deployment k8sflaskdeployment k8sflask=$registry:$BUILD_NUMBER"
+      }
+    }
 
     /*stage('Remove docker image') {
       steps{
