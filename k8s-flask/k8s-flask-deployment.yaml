@@ -17,6 +17,6 @@ spec:
       containers:
       - name: k8sFlask
         image: k8sFlask:1.0
-        imagePullPolicy: Never
+        #imagePullPolicy: Never
         ports: 
         - containerPort: 5005
