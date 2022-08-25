@@ -16,7 +16,7 @@ def index():
     global hits
     if request.method == 'GET':
         hits+=1
-        return f'{host_name} version {version} has received {hits} requests on local port {port}'
+        return f'{host_name} version {version} has received {hits} requests on loca port {port}'
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=port)
